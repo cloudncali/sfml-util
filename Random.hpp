@@ -5,13 +5,13 @@
 namespace Random
 {
 	std::random_device g_RandomDevice;
-	
+
 	void Seed()
 	{
 	}
 
 	std::uniform_int_distribution<> distrib;
-	std::uniform_int_distribution<> distrib2(1,2);
+	std::uniform_int_distribution<> distrib2(1, 2);
 	std::uniform_int_distribution<> distrib4(1, 4);
 	std::uniform_int_distribution<> distrib6(1, 6);
 	std::uniform_int_distribution<> distrib8(1, 8);
@@ -21,7 +21,7 @@ namespace Random
 	std::uniform_int_distribution<> distrib100(1, 100);
 	std::uniform_real_distribution<float> distribf(0.f, 1.f);
 	unsigned int Get() { return distrib(std::mt19937(g_RandomDevice())); }
-	unsigned int Get2(){ return distrib2(std::mt19937(g_RandomDevice())); }
+	unsigned int Get2() { return distrib2(std::mt19937(g_RandomDevice())); }
 	unsigned int Get4() { return distrib4(std::mt19937(g_RandomDevice())); }
 	unsigned int Get6() { return distrib6(std::mt19937(g_RandomDevice())); }
 	unsigned int Get8() { return distrib8(std::mt19937(g_RandomDevice())); }
